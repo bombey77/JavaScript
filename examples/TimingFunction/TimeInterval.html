@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TimeInterval</title>
+    <script type="text/javascript">
+        let timer = 0;
+        let seconds = 0;
+
+        function printMessage() {
+            let label = document.getElementById("label");
+            label.innerText = seconds++;
+        }
+
+        function start() {
+            //starts interval for 1 seconds
+            timer = window.setInterval(printMessage, 1000);
+        }
+
+        function stop() {
+            //disable interval
+            window.clearInterval(timer);
+        }
+    </script>
+</head>
+<body>
+<button id="start" onclick="start()">Start</button>
+<h1 id="label">Text</h1>
+<button id="stop" onclick="stop()">Stop</button>
+</body>
+</html>

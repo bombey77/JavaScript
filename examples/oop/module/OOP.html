@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OOP</title>
+</head>
+<body>
+
+<script src="User.js"></script>
+<script src="Student.js"></script>
+
+<script type="text/javascript">
+    let name = 'Roman';
+    let sureName = 'Moto';
+    let age = 33;
+
+    let user = new User(name, sureName, age);
+    user.doWork();
+
+    let student = new Student(name, sureName, age, 'Math');
+    student.doWork();
+
+    // User is doing some work...
+    // User is doing some work...
+    // Student is doing some work...
+</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fade In Fade Out</title>
+    <script type="text/javascript">
+        let intervalID = 0;
+        let opacity = 0;
+
+        function hide() {
+            let img = document.getElementById("image");
+            opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+
+            if (opacity > 0) {
+                opacity -= 0.1;
+                img.style.opacity = opacity.toString();
+            } else {
+                clearInterval(intervalID);
+            }
+        }
+
+        function fadeOut() {
+            intervalID = window.setInterval(hide, 200);
+        }
+
+        function show() {
+            let img = document.getElementById("image");
+            opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+
+            if (opacity < 1) {
+                opacity += 0.1;
+                img.style.opacity = opacity.toString();
+            } else {
+                clearInterval(intervalID);
+            }
+        }
+
+        function fadeIn() {
+            intervalID = window.setInterval(show, 200);
+        }
+    </script>
+</head>
+<body>
+<button id="fadeIn" onclick="fadeIn()">Fade In</button>
+<img id="image" src="../resource/m1.png"/>
+<button id="fadeOut" onclick="fadeOut()">Fade Out</button>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>On Mouse</title>
+    <script type="text/javascript">
+        function onMouseOver() {
+            let image = document.getElementById("myImg");
+            image.src = "../resource/m2.png";
+        }
+
+        function onMouseOut() {
+            let image = document.getElementById("myImg");
+            image.src = "../resource/m1.png";
+        }
+    </script>
+</head>
+<body>
+<img id="myImg" src="../resource/m1.png" width="128px"
+     onmouseover="onMouseOver()" onmouseout="onMouseOut()"/>
+</body>
+</html>

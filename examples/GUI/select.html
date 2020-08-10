@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select</title>
+    <style>
+        body {
+            background-color: bisque
+        }
+        select {
+            background-color: coral;
+            width: 100px;
+        }
+    </style>
+
+    <script>
+        function selectOption() {
+            let select = document.getElementById("mySelect");
+            alert(select.options[select.selectedIndex].value); //Один, Два, Три
+        }
+    </script>
+</head>
+<body>
+<select id="mySelect">
+    <option value="Один">One</option> /*при получении value вернет - Один*/
+    <option value="Два" selected>Two</option> /*значение по умолчанию*/
+    <option value="Три">Three</option>
+</select>
+<button id="selectBtn" type="submit" onclick="selectOption()">Select</button>
+</body>
+</html>

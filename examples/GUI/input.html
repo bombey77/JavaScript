@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input</title>
+    <script type="text/javascript">
+        function callAlert() {
+            let message = "user - " + getUser() +
+                ", password - " + getPassword();
+            alert(message);
+        }
+
+        function getUser() {
+            let user = document.getElementById("user").value;//getting input value
+            return user;
+        }
+
+        function getPassword() {
+            let password = document.getElementById("password").value;
+            return password;
+        }
+    </script>
+</head>
+<body>
+<input id="user" type="text" placeholder="User"/>
+<input id="password" type="password" placeholder="Password"/>
+<button type="submit" onclick="callAlert()">Submit</button>
+
+</body>
+</html>

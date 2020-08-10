@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validation</title>
+    <script type="text/javascript">
+        function login() {
+            let user = document.getElementById("user");
+            let password = document.getElementById("password");
+
+            if (user.value === "" || password.value === "") {
+                document.getElementById("user").style.border = "3px red solid";
+                document.getElementById("userLabel").style.visibility = "visible";
+                alert("User can't be empty");
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+<form onsubmit="return login()" action="radio.html">
+    <input type="text" id="user" placeholder="User"/>
+    <label id="userLabel" style="color: red; visibility: hidden">Invalid</label>
+    <br/>
+    <input type="password" id="password" placeholder="Password"/>
+    <br/>
+    <button type="submit">Sign In</button>
+</form>
+</body>
+</html>

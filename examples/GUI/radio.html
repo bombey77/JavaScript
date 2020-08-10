@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Radio</title>
+    <script type="text/javascript">
+        function callAlert() {
+            let result;
+
+            let radBtn1 = document.getElementById("btn1");
+            let radBtn2 = document.getElementById("btn2");
+
+            if (radBtn1.checked == true) {
+                result = radBtn1.value;//returns - text 123
+            } else if (radBtn2.checked == true) {
+                result = radBtn2.value;//returns - text 456
+            } else {
+                result = "Radio button wasn't clicked"
+            }
+
+            alert(result);
+        }
+    </script>
+</head>
+<body>
+<!--если name одинаковое у нескольких radio button, то при выборе можно будет выбрать только одну кнопку-->
+<input id="btn1" name="myBtn" value="text 123" type="radio">Radio button 1</input>
+<br>
+<input id="btn2" name="myBtn" value="text 456" type="radio">Radio button 2</input>
+<br>
+<button type="submit" onclick="callAlert()">Check</button>
+</body>
+</html>
